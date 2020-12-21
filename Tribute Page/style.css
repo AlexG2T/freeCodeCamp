@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 2rem 0.5rem;
+  font-family: "Poppins", sans-serif;
+}
+
+main {
+  margin: 2.5rem 1rem;
+  height: 100%;
+  background-color: #eee;
+  border-radius: 7px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#title {
+  font-size: 3rem;
+  padding: 2rem 0 0.7rem 0;
+}
+
+header p {
+  padding-bottom: 1rem;
+}
+
+#img-div {
+  background-color: white;
+  margin: 0 1rem 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#image {
+  height: auto;
+  max-width: 40%;
+  margin-top: 2rem;
+}
+
+#img-caption {
+  margin: 0.75rem 0;
+  font-size: 1.1rem;
+}
+
+#tribute-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 1.3rem;
+  padding: 4rem 0;
+}
+
+#fav-movies {
+  width: 35%;
+  justify-self: center;
+}
+
+#fav-movies li {
+  padding: 0.5rem 0;
+}
+
+.quote-box {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  right: 1.1rem;
+}
+
+#quote {
+  font-style: italic;
+  text-align: justify;
+  text-justify: inter-word;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+#author {
+  font-style: italic;
+  font-weight: 600;
+  margin-bottom: 3.5rem;
+}
+
+#footer {
+  font-weight: 600;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
