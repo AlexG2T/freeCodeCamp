@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Technical Documentation Page</title>
+  </head>
+  <body>
+    <!-- php logo -->
+    <a href="https://www.php.net/" target="_blank"
+      ><img
+        src="https://www.php.net/images/logos/new-php-logo.svg"
+        alt="php logo"
+        id="php-logo"
+    /></a>
+    <!-- navbar -->
+    <nav id="navbar">
+      <header>
+        <h1>PHP Loops Documentation</h1>
+      </header>
+      <hr />
+      <a href="#php_loops" class="nav-link">PHP Loops</a>
+      <hr />
+      <a href="#php_while_loop" class="nav-link">PHP While Loop</a>
+      <hr />
+      <a href="#php_do_while_loop" class="nav-link">PHP do while Loop</a>
+      <hr />
+      <a href="#php_for_loop" class="nav-link">PHP for Loop</a>
+      <hr />
+      <a href="#php_foreach_loop" class="nav-link">PHP foreach Loop</a>
+      <hr />
+      <a href="#php_break_and_continue" class="nav-link"
+        >PHP Break and Continue</a
+      >
+      <hr />
+    </nav>
+    <main id="main-doc">
+      <!-- PHP Loops -->
+      <section class="main-section" id="php_loops">
+        <header>
+          <h2>PHP Loops</h2>
+        </header>
+        <hr />
+        <p class="initial-p">
+          In the following chapters you will learn how to repeat code by using
+          loops in PHP.
+        </p>
+        <hr />
+        <h3>Introduction</h3>
+        <p>
+          Often when you write code, you want the same block of code to run over
+          and over again a certain number of times. So, instead of adding
+          several almost equal code-lines in a script, we can use loops.
+        </p>
+        <p>
+          Loops are used to execute the same block of code again and again, as
+          long as a certain condition is true.
+        </p>
+        <p>In PHP, we have the following loop types:</p>
+        <ul>
+          <li>
+            <code>while</code> - loops through a block of code as long as the
+            specified condition is true
+          </li>
+          <li>
+            <code>do...while</code> - loops through a block of code once, and
+            then repeats the loop as long as the specified condition is true
+          </li>
+          <li>
+            <code>for</code> - loops through a block of code a specified number
+            of times
+          </li>
+          <li>
+            <code>foreach</code> - loops through a block of code for each
+            element in an array
+          </li>
+        </ul>
+        <p>
+          The following chapters will explain and give examples of each loop
+          type.
+        </p>
+      </section>
+      <!-- PHP While Loop -->
+      <section class="main-section" id="php_while_loop">
+        <header>
+          <h2>PHP While Loop</h2>
+        </header>
+        <hr />
+        <p class="initial-p">
+          The <code>while</code> loop - Loops through a block of code as long as
+          the specified condition is true.
+        </p>
+        <hr />
+        <h3>Introduction</h3>
+        <p>
+          The <code>while</code> loop executes a block of code as long as the
+          specified condition is true.
+        </p>
+        <h4>Syntax</h4>
+        <div class="code-box1">
+          <p>while (<em>condition is true</em>) {</p>
+          <p class="p-indent1"><em>code to be executed;</em></p>
+          <p>}</p>
+        </div>
+        <h4>Examples</h4>
+        <p>The example below displays the numbers from 1 to 5:</p>
+        <div class="example">
+          <h4>Example</h4>
+          <div class="example-box">
+            <p>&#60;?php</p>
+            <p>$x = 1;</p>
+            <br />
+            <p>while($x &#60;= 5) {</p>
+            <p class="p-indent1">echo "The number is: $x &#60;br&#62;;</p>
+            <p class="p-indent1">$x++;</p>
+            <p>}</p>
+            <p>?&#62;</p>
+          </div>
+        </div>
+        <h4>Example Explained</h4>
+        <ul>
+          <li>
+            $x = 1; Initialize the loop counter ($x), and set the start value to
+            1
+          </li>
+          <li>
+            $x &#60;= 5 - Continue the loop as long as $x is less than or equal
+            to 5
+          </li>
+          <li>
+            $x++; - Increase the loop counter value by 1 for each iteration
+          </li>
+        </ul>
+        <p>This example counts to 100 by tens:</p>
+        <div class="example">
+          <h4>Example</h4>
+          <div class="example-box">
+            <p>&#60;?php</p>
+            <p>$x = 0;</p>
+            <br />
+            <p>while($x &#60;= 100) {</p>
+            <p class="p-indent1">echo "The number is: $x &#60;br&#62;";</p>
+            <p class="p-indent1">$x+=10;</p>
+            <p>}</p>
+            <p>?&#62;</p>
+          </div>
+        </div>
+        <h4>Example Explained</h4>
+        <ul>
+          <li>
+            $x = 0; - Initialize the loop counter ($x), and set the start value
+            to 0
+          </li>
+          <li>
+            $x &#60;= 100 - Continue the loop as long as $x is less than or
+            equal to 100
+          </li>
+          <li>
+            $x+=10; - Increase the loop counter value by 10 for each iteration
+          </li>
+        </ul>
+      </section>
+      <!-- PHP do while Loop -->
+      <section class="main-section" id="php_do_while_loop">
+        <header>
+          <h2>PHP do while Loop</h2>
+        </header>
+        <hr />
+        <p class="initial-p">
+          The <code>do...while</code> loop - Loops through a block of code once,
+          and then repeats the loop as long as the specified condition is true.
+        </p>
+        <hr />
+        <h3>Introduction</h3>
+        <p>
+          The <code>do...while</code> loop will always execute the block of code
+          once, it will then check the condition, and repeat the loop while the
+          specified condition is true.
+        </p>
+        <h4>Syntax</h4>
+        <div class="code-box1">
+          <p>do {</p>
+          <p class="p-indent1"><em>code to be executed;</em></p>
+          <p>} while (<em>condition is true</em>);</p>
+        </div>
+        <h4>Examples</h4>
+        <p>
+          The example below first sets a variable $x to 1 ($x = 1). Then, the do
+          while loop will write some output, and then increment the variable $x
+          with 1. Then the condition is checked (is $x less than, or equal to
+          5?), and the loop will continue to run as long as $x is less than, or
+          equal to 5:
+        </p>
+        <div class="example">
+          <h4>Example</h4>
+          <div class="example-box">
+            <p>&#60;?php</p>
+            <p>$x = 1;</p>
+            <br />
+            <p>do {</p>
+            <p class="p-indent1">echo "The number is: $x &#60;br&#62;;</p>
+            <p class="p-indent1">$x++;</p>
+            <p>} while ($x &#60;= 5);</p>
+            <p>?&#62;</p>
+          </div>
+        </div>
+        <div class="note">
+          <p>
+            <strong>Note:</strong> In a <code>do...while</code> loop the
+            condition is tested AFTER executing the statements within the loop.
+            This means that the <code>do...while</code> loop will execute its
+            statements at least once, even if the condition is false. See
+            example below.
+          </p>
+        </div>
+        <p>
+          This example sets the $x variable to 6, then it runs the loop,
+          <strong>and then the condition is checked:</strong>
+        </p>
+        <div class="example">
+          <h4>Example</h4>
+          <div class="example-box">
+            <p>&#60;?php</p>
+            <p>$x = 6;</p>
+            <br />
+            <p>do {</p>
+            <p class="p-indent1">echo "The number is: $x &#60;br&#62;;</p>
+            <p class="p-indent1">$x++;</p>
+            <p>} while ($x &#60;= 5);</p>
+            <p>?&#62;</p>
+          </div>
+        </div>
+      </section>
+      <!-- PHP for Loop -->
+      <section class="main-section" id="php_for_loop">
+        <header>
+          <h2>PHP for Loop</h2>
+        </header>
+        <hr />
+        <p class="initial-p">
+          The <code>for</code> loop - Loops through a block of code a specified
+          number of times.
+        </p>
+        <hr />
+        <h3>Introduction</h3>
+        <p>
+          The <code>for</code> loop is used when you know in advance how many
+          times the script should run.
+        </p>
+        <h4>Syntax</h4>
+        <div class="code-box1">
+          <p>for (<em>init counter; test counter; increment counter</em>) {</p>
+          <p class="p-indent1">
+            <em>code to be executed for each iteration;</em>
+          </p>
+          <p>}</p>
+        </div>
+        <p>Parameters:</p>
+        <ul>
+          <li><em>init counter</em>: Initialize the loop counter value</li>
+          <li>
+            <em>test counter</em>: Evaluated for each loop iteration. If it
+            evaluates to TRUE, the loop continues. If it evaluates to FALSE, the
+            loop ends
+          </li>
+          <li><em>increment counter</em>: Increases the loop counter value</li>
+        </ul>
+        <h4>Examples</h4>
+        <p>The example below displays the numbers from 0 to 10:</p>
+        <div class="example">
+          <h4>Example</h4>
+          <div class="example-box">
+            <p>&#60;?php</p>
+            <p>for ($x = 0; $x &#60;= 10; $x++) {</p>
+            <p class="p-indent1">echo "The number is: $x &#60;br&#62;;</p>
+            <p>}</p>
+            <p>?&#62;</p>
+          </div>
+        </div>
+        <h4>Example Explained</h4>
+        <ul>
+          <li>
+            $x = 0; - Initialize the loop counter ($x), and set the start value
+            to 0
+          </li>
+          <li>
+            $x &#60;= 10; - Continue the loop as long as $x is less than or
+            equal to 10
+          </li>
+          <li>
+            $x++ - Increase the loop counter value by 1 for each iteration
+          </li>
+        </ul>
+        <p>This example counts to 100 by tens:</p>
+        <div class="example">
+          <h4>Example</h4>
+          <div class="example-box">
+            <p>&#60;?php</p>
+            <p>for ($x = 0; $x &#60;= 100; $x+=10) {</p>
+            <p class="p-indent1">echo "The number is: $x &#60;br&#62;;</p>
+            <p>}</p>
+            <p>?&#62;</p>
+          </div>
+        </div>
+        <h4>Example Explained</h4>
+        <ul>
+          <li>
+            $x = 0; - Initialize the loop counter ($x), and set the start value
+            to 0
+          </li>
+          <li>
+            $x &#60;= 100; - Continue the loop as long as $x is less than or
+            equal to 100
+          </li>
+          <li>
+            $x+=10 - Increase the loop counter value by 10 for each iteration
+          </li>
+        </ul>
+      </section>
+      <!-- PHP foreach Loop -->
+      <section class="main-section" id="php_foreach_loop">
+        <header>
+          <h2>PHP foreach Loop</h2>
+        </header>
+        <hr />
+        <p class="initial-p">
+          The <code>foreach</code> loop - Loops through a block of code for each
+          element in an array.
+        </p>
+        <hr />
+        <h3>Introduction</h3>
+        <p>
+          The <code>foreach</code> loop works only on arrays, and is used to
+          loop through each key/value pair in an array.
+        </p>
+        <h4>Syntax</h4>
+        <div class="code-box1">
+          <p>foreach (<em>$array as $value</em>) {</p>
+          <p class="p-indent1">
+            <em>code to be executed;</em>
+          </p>
+          <p>}</p>
+        </div>
+        <p>
+          For every loop iteration, the value of the current array element is
+          assigned to $value and the array pointer is moved by one, until it
+          reaches the last array element.
+        </p>
+        <h4>Examples</h4>
+        <p>
+          The following example will output the values of the given array
+          ($colors):
+        </p>
+        <div class="example">
+          <h4>Example</h4>
+          <div class="example-box">
+            <p>&#60;?php</p>
+            <p>$colors = array("red", "green", "blue", "yellow");</p>
+            <br />
+            <p>foreach ($colors as $value) {</p>
+            <p class="p-indent1">echo "$value &#60;br&#62;";</p>
+            <p>}</p>
+            <p>?&#62;</p>
+          </div>
+        </div>
+        <p>
+          The following example will output both the keys and the values of the
+          given array ($age):
+        </p>
+        <div class="example">
+          <h4>Example</h4>
+          <div class="example-box">
+            <p>&#60;?php</p>
+            <p>
+              $age = array("Peter"=&#62;"35", "Ben"=&#62;"37", "Joe"=&#62;"43");
+            </p>
+            <br />
+            <p>foreach ($age as $x =&#62; $val) {</p>
+            <p class="p-indent1">echo "$x = $val&#60;br&#62;";</p>
+            <p>}</p>
+            <p>?&#62;</p>
+          </div>
+        </div>
+      </section>
+      <!-- PHP Break and Continue -->
+      <section class="main-section" id="php_break_and_continue">
+        <header>
+          <h2>PHP Break and Continue</h2>
+        </header>
+        <hr />
+        <h3>PHP Break</h3>
+        <p>
+          You have already seen the <code>break</code> statement used in an
+          earlier chapter of this tutorial. It was used to "jump out" of a
+          <code>switch</code> statement.
+        </p>
+        <p>
+          The <code>break</code> statement can also be used to jump out of a
+          loop.
+        </p>
+        <p>
+          This example jumps out of the loop when <strong>x</strong> is equal to
+          <strong>4:</strong>
+        </p>
+        <div class="example">
+          <h4>Example</h4>
+          <div class="example-box">
+            <p>&#60;?php</p>
+            <p>for ($x = 0; $x &#60; 10; $x++) {</p>
+            <p class="p-indent1">if ($x == 4) {</p>
+            <p class="p-indent2">break;</p>
+            <p class="p-indent1">}</p>
+            <p class="p-indent1">echo "The number is: $x &#60;br&#62;;</p>
+            <p>}</p>
+            <p>?&#62;</p>
+          </div>
+        </div>
+        <hr />
+        <h3>PHP Continue</h3>
+        <p>
+          The <code>continue</code> statement breaks one iteration (in the
+          loop), if a specified condition occurs, and continues with the next
+          iteration in the loop.
+        </p>
+        <p>This example skips the value of <strong>4:</strong></p>
+        <div class="example">
+          <h4>Example</h4>
+          <div class="example-box">
+            <p>&#60;?php</p>
+            <p>for ($x = 0; $x &#60; 10; $x++) {</p>
+            <p class="p-indent1">if ($x == 4) {</p>
+            <p class="p-indent2">continue;</p>
+            <p class="p-indent1">}</p>
+            <p class="p-indent1">echo "The number is: $x &#60;br&#62;;</p>
+            <p>}</p>
+            <p>?&#62;</p>
+          </div>
+        </div>
+        <hr />
+        <h3>Break and Continue in While Loop</h3>
+        <p>
+          You can also use <code>break</code> and <code>continue</code> in
+          <code>while</code> loops:
+        </p>
+        <div class="example">
+          <h4>Break Example</h4>
+          <div class="example-box">
+            <p>&#60;?php</p>
+            <p>$x = 0</p>
+            <br />
+            <p>while($x &#60; 10) {</p>
+            <p class="p-indent1">if ($x == 4) {</p>
+            <p class="p-indent2">break;</p>
+            <p class="p-indent1">}</p>
+            <p class="p-indent1">echo "The number is: $x &#60;br&#62;;</p>
+            <p class="p-indent1">$x++;</p>
+            <p>}</p>
+            <p>?&#62;</p>
+          </div>
+        </div>
+        <div class="example">
+          <h4>Continue Example</h4>
+          <div class="example-box">
+            <p>&#60;?php</p>
+            <p>$x = 0</p>
+            <br />
+            <p>while($x &#60; 10) {</p>
+            <p class="p-indent1">if ($x == 4) {</p>
+            <p class="p-indent2">$x++;</p>
+            <p class="p-indent2">continue;</p>
+            <p class="p-indent1">}</p>
+            <p class="p-indent1">echo "The number is: $x &#60;br&#62;;</p>
+            <p class="p-indent1">$x++;</p>
+            <p>}</p>
+            <p>?&#62;</p>
+          </div>
+        </div>
+        <h2>Reference</h2>
+        <p>
+          All the documentation in this page is taken from
+          <a
+            href="https://www.w3schools.com/php/php_looping.asp"
+            target="_blank"
+            id="reference"
+            >w3schools.com</a
+          >
+        </p>
+        <hr />
+      </section>
+      <footer>
+        <p id="copyright">&copy;Alexandre Teixeira 2020</p>
+      </footer>
+    </main>
+  </body>
+</html>
