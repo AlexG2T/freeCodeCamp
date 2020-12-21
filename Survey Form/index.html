@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Survey Form</title>
+  </head>
+  <body>
+    <main>
+      <h1 id="title">Rocket League S1 Survey Form</h1>
+      <p id="description">
+        Take your time filling out this form about Rocket League's Season One
+      </p>
+      <form id="survey-form">
+        <fieldset>
+          <legend>Personal information</legend>
+          <label id="name-label" for="name">Name</label>
+          <input
+            required
+            id="name"
+            type="text"
+            autocomplete="off"
+            placeholder="Enter your name..."
+            minlength="2"
+            maxlength="20"
+          />
+          <label id="email-label" for="email">E-mail</label>
+          <input
+            required
+            id="email"
+            type="email"
+            autocomplete="off"
+            placeholder="Enter your e-mail..."
+          />
+          <label id="number-label" for="number">Age (optional)</label>
+          <input
+            id="number"
+            type="number"
+            min="5"
+            max="99"
+            autocomplete="off"
+            placeholder="Enter your age..."
+          />
+        </fieldset>
+        <!-- Ask about when people started playing RL (maybe the year)-->
+        <p class="question">1. What was your highest rank last season?</p>
+        <select name="rank" id="dropdown">
+          <option selected disabled value="">Select highest rank...</option>
+          <option value="NA">N/A</option>
+          <option value="Bronze 1">Bronze I</option>
+          <option value="Bronze 2">Bronze II</option>
+          <option value="Bronze 3">Bronze III</option>
+          <option value="Silver 1">Silver I</option>
+          <option value="Silver 2">Silver II</option>
+          <option value="Silver 3">Silver III</option>
+          <option value="Gold 1">Gold I</option>
+          <option value="Gold 2">Gold II</option>
+          <option value="Gold 3">Gold III</option>
+          <option value="Platinum 1">Platinum I</option>
+          <option value="Platinum 2">Platinum II</option>
+          <option value="Platinum 3">Platinum III</option>
+          <option value="Diamond 1">Diamond I</option>
+          <option value="Diamond 2">Diamond II</option>
+          <option value="Diamond 3">Diamond III</option>
+          <option value="Champion 1">Champion I</option>
+          <option value="Champion 2">Champion II</option>
+          <option value="Champion 3">Champion III</option>
+          <option value="Grand Champion 1">Grand Champion I</option>
+          <option value="Grand Champion 2">Grand Champion II</option>
+          <option value="Grand Champion 3">Grand Champion III</option>
+          <option value="Supersonic Legend">Supersonic Legend</option>
+        </select>
+        <p class="question">
+          2. What competitive gamemode did you play the most?
+        </p>
+        <label class="gamemode-label">
+          <input
+            checked
+            type="radio"
+            name="gamemode"
+            id="ones"
+            value="ones"
+            class="radiobtn"
+          />
+          1v1</label
+        >
+        <label class="gamemode-label">
+          <input
+            type="radio"
+            name="gamemode"
+            id="twos"
+            value="twos"
+            class="radiobtn"
+          />
+          2v2</label
+        >
+        <label class="gamemode-label">
+          <input
+            type="radio"
+            name="gamemode"
+            id="threes"
+            value="threes"
+            class="radiobtn"
+          />
+          3v3</label
+        >
+        <label class="gamemode-label">
+          <input
+            type="radio"
+            name="gamemode"
+            id="other"
+            value="other"
+            class="radiobtn"
+          />
+          Other (extra modes)</label
+        >
+        <label class="gamemode-label">
+          <input
+            type="radio"
+            name="gamemode"
+            id="casual"
+            value="casual"
+            class="radiobtn"
+          />
+          I only played casual</label
+        >
+        <p id="question3">3. What battle-car did you use the most?</p>
+        <select name="car" id="dropdown2">
+          <option selected disabled value="">
+            Select most used battle-car...
+          </option>
+          <option value="'16 Batmobile">'16 Batmobile</option>
+          <option value="'70 Dodge Charger R/T">'70 Dodge Charger R/T</option>
+          <option value="'89 Batmobile">'89 Batmobile</option>
+          <option value="'99 Nissan Skyline GT-R R34">
+            '99 Nissan Skyline GT-R R34
+          </option>
+          <option value="Aftershock">Aftershock</option>
+          <option value="Animus GP">Animus GP</option>
+          <option value="Armadillo">Armadillo</option>
+          <option value="Artemis">Artemis</option>
+          <option value="Backfire">Backfire</option>
+          <option value="Battle Bus">Battle Bus</option>
+          <option value="Bone Shaker">Bone Shaker</option>
+          <option value="Breakout">Breakout</option>
+          <option value="Breakout Type-S">Breakout Type-S</option>
+          <option value="Centio V17">Centio V17</option>
+          <option value="Chikara">Chikara</option>
+          <option value="Cyclone">Cyclone</option>
+          <option value="DeLorean Time Machine">DeLorean Time Machine</option>
+          <option value="Diestro">Diestro</option>
+          <option value="Dominus">Dominus</option>
+          <option value="Dominus GT">Dominus GT</option>
+          <option value="Ecto-1">Ecto-1</option>
+          <option value="Endo">Endo</option>
+          <option value="Esper">Esper</option>
+          <option value="Fast 4WD">Fast 4WD</option>
+          <option value="Fennec">Fennec</option>
+          <option value="Gazella GT">Gazella GT</option>
+          <option value="Gizmo">Gizmo</option>
+          <option value="Grog">Grog</option>
+          <option value="Guardian">Guardian</option>
+          <option value="Harbinger">Harbinger</option>
+          <option value="Hogsticker">Hogsticker</option>
+          <option value="Hotshot">Hotshot</option>
+          <option value="Ice Charger">Ice Charger</option>
+          <option value="Imperator DT5">Imperator DT5</option>
+          <option value="Jäger 619 RS">Jäger 619 RS</option>
+          <option value="Jurassic Jeep Wrangler">
+            Jurassic Jeep&reg; Wrangler
+          </option>
+          <option value="K.I.T.T.">K.I.T.T.</option>
+          <option value="Komodo">Komodo</option>
+          <option value="Luigi NSR">Luigi NSR</option>
+          <option value="Mantis">Mantis</option>
+          <option value="Mario NSR">Mario NSR</option>
+          <option value="Marauder">Marauder</option>
+          <option value="Masamune">Masamune</option>
+          <option value="Maverick">Maverick</option>
+          <option value="McLaren 570S">McLaren 570S</option>
+          <option value="Merc">Merc</option>
+          <option value="MR11">MR11</option>
+          <option value="Mudcat">Mudcat</option>
+          <option value="Nemesis">Nemesis</option>
+          <option value="Nimbus">Nimbus</option>
+          <option value="Octane">Octane</option>
+          <option value="Octane ZSR">Octane ZSR</option>
+          <option value="Paladin">Paladin</option>
+          <option value="Peregrine TT">Peregrine TT</option>
+          <option value="Proteus">Proteus</option>
+          <option value="R3MX">R3MX</option>
+          <option value="Ripper">Ripper</option>
+          <option value="Road Hog">Road Hog</option>
+          <option value="Road Hog XL">Road Hog XL</option>
+          <option value="Ronin">Ronin</option>
+          <option value="Samurai">Samurai</option>
+          <option value="Samus' Gunship">Samus' Gunship</option>
+          <option value="Scarab">Scarab</option>
+          <option value="Sentinel">Sentinel</option>
+          <option value="Sweet Tooth">Sweet Tooth</option>
+          <option value="Takumi">Takumi</option>
+          <option value="Takumi RX-T">Takumi RX-T</option>
+          <option value="The Dark Knight Rises Tumbler">
+            The Dark Knight Rises Tumbler
+          </option>
+          <option value="Triton">Triton</option>
+          <option value="Twin Mill III">Twin Mill III</option>
+          <option value="Twinzer">Twinzer</option>
+          <option value="Venom">Venom</option>
+          <option value="Vulcan">Vulcan</option>
+          <option value="Werewolf">Werewolf</option>
+          <option value="X-Devil">X-Devil</option>
+          <option value="X-Devil Mk2">X-Devil Mk2</option>
+          <option value="Zippy">Zippy</option>
+        </select>
+        <p class="question">
+          4. What did you like about Season 1?<span id="clue">
+            (Check all that apply)</span
+          >
+        </p>
+        <label class="liked-label">
+          <input
+            type="checkbox"
+            name="liked"
+            id="tournaments"
+            value="Tournaments"
+            class="checkbox"
+          />
+          Tournaments</label
+        >
+        <label class="liked-label">
+          <input
+            type="checkbox"
+            name="liked"
+            id="compseason"
+            value="Competitive Season"
+            class="checkbox"
+          />
+          Competitive Season</label
+        >
+        <label class="liked-label">
+          <input
+            type="checkbox"
+            name="liked"
+            id="extraplaylist"
+            value="Extra Modes Playlist"
+            class="checkbox"
+          />
+          Extra Modes Playlist</label
+        >
+        <label class="liked-label">
+          <input
+            type="checkbox"
+            name="liked"
+            id="rocketpass"
+            value="Rocket Pass"
+            class="checkbox"
+          />
+          Rocket Pass</label
+        >
+        <label class="liked-label">
+          <input
+            type="checkbox"
+            name="liked"
+            id="shopitems"
+            value="Shop items"
+            class="checkbox"
+          />
+          Shop items</label
+        >
+        <label class="liked-label">
+          <input
+            type="checkbox"
+            name="liked"
+            id="playalone"
+            value="Playing alone"
+            class="checkbox"
+          />
+          Playing alone</label
+        >
+        <label class="liked-label">
+          <input
+            type="checkbox"
+            name="liked"
+            id="playfriends"
+            value="Playing with friends"
+            class="checkbox"
+          />
+          Playing with friends</label
+        >
+        <label class="liked-label">
+          <input
+            type="checkbox"
+            name="liked"
+            id="rlcs"
+            value="RLCS"
+            class="checkbox"
+          />
+          RLCS</label
+        >
+        <p class="question">Final comment (optional)</p>
+        <textarea
+          name="addtxt"
+          id="addtxt"
+          cols="30"
+          rows="7"
+          placeholder="Have anything to add?..."
+          maxlength="300"
+        ></textarea>
+        <button type="submit" id="submit">Submit</button>
+      </form>
+      <p id="copyright">&copyAlexandre Teixeira 2020</p>
+    </main>
+  </body>
+</html>
