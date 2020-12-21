@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>PenPoint</title>
+  </head>
+  <body>
+    <header id="header">
+      <img src="/img/PenPoint.png" alt="PenPoint logo" id="header-img" />
+      <nav id="nav-bar">
+        <ul>
+          <li class="list">
+            <a class="nav-link" href="#features">Features</a>
+          </li>
+          <li class="list"><a class="nav-link" href="#pricing">Pricing</a></li>
+          <li class="list">
+            <a class="nav-link" href="#contact-us">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="face">
+        <h1 id="product">Designed for you.</h1>
+        <h2 id="slogan">
+          Love what you <br />
+          <span>write with...</span>
+        </h2>
+      </section>
+      <section id="features">
+        <h2 id="features-title">Features</h2>
+        <div class="grid1">
+          <i class="fas fa-star" id="star"></i>
+          <h3 id="pmat">Premium materials</h3>
+          <p id="pmat-d">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A alias
+            eaque modi fugit sit quis vel impedit illum tempore laborum.
+          </p>
+          <i class="fas fa-pen-fancy" id="pen-f"></i>
+          <h3 id="perspen">Personalize your pen</h3>
+          <p id="perspen-d">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A alias
+            eaque modi fugit sit quis vel impedit illum tempore laborum.<a
+              href="#"
+              id="learn-more"
+            >
+              Learn More...</a
+            >
+          </p>
+          <i class="fas fa-truck" id="truck"></i>
+          <h3 id="fastship">Fast shipping</h3>
+          <p id="fastship-d">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A alias
+            eaque modi fugit sit quis vel impedit illum tempore laborum.
+          </p>
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://www.youtube.com/embed/0E00Zuayv9Q?start=10"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            id="video"
+          ></iframe>
+        </div>
+      </section>
+      <section id="pricing">
+        <h2 id="pricing-title">Bundles Pricing</h2>
+        <div id="pricing-container">
+          <div id="bronze">
+            <div class="price">
+              <span class="bundle-type" id="bunbronze">Bronze</span>
+              <span class="start">Starting at:</span>
+              <h3>£50</h3>
+              <ul class="bundle">
+                <li>1 pen</li>
+                <li>2 refills</li>
+                <li>Engraved message <span class="extra">(+£15)</span></li>
+              </ul>
+              <button type="button" class="btn">Buy Now!</button>
+            </div>
+          </div>
+          <div id="silver">
+            <div class="price">
+              <span class="bundle-type" id="bunsilver">Silver</span>
+              <span class="start">Starting at:</span>
+              <h3>£200</h3>
+              <ul class="bundle">
+                <li>3 pens</li>
+                <li>9 refills</li>
+                <li>Engraved message <span class="extra">(+£12)</span></li>
+              </ul>
+              <button type="button" class="btn">Buy Now!</button>
+            </div>
+          </div>
+          <div id="gold">
+            <div class="price">
+              <span class="bundle-type" id="bungold">Gold</span>
+              <span class="start">Starting at:</span>
+              <h3>£400</h3>
+              <ul class="bundle">
+                <li>5 pens</li>
+                <li>20 refills</li>
+                <li>Engraved message <span class="extra">(+£8)</span></li>
+              </ul>
+              <button type="button" class="btn">Buy Now!</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact-us">
+        <h2 id="contact-title">Contact Us</h2>
+        <form action="https://www.freecodecamp.com/email-submit" id="form">
+          <div id="cu-name">
+            <label for="name">Name:</label>
+            <input
+              required
+              type="text"
+              id="name"
+              name="name"
+              maxlength="20"
+              placeholder="Enter your name here..."
+              autocomplete="off"
+            />
+          </div>
+          <div id="cu-email">
+            <label for="email">E-mail:</label>
+            <input
+              required
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your e-mail here..."
+              autocomplete="off"
+            />
+          </div>
+          <div id="cu-message">
+            <label for="message">Message (max:200 characters):</label>
+            <textarea
+              required
+              name="message"
+              id="message"
+              cols="40"
+              rows="10"
+              placeholder="Enter your message here..."
+              maxlength="200"
+            ></textarea>
+          </div>
+
+          <input type="submit" id="submit" />
+        </form>
+      </section>
+      <footer>
+        <h4>&copy;Alexandre Teixeira 2020</h4>
+      </footer>
+    </main>
+  </body>
+</html>
